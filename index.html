@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ! Husk nu at ændre titlen -->
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/index.js" defer></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GeoAR.js demo</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>
+      THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/';
+    </script>
   </head>
-  <body></body>
+  <body style="margin: 0; overflow: hidden">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+    >
+      <!-- 57.049128249675306, 9.967875857834237 -->
+      <a-camera gps-camera rotation-reader></a-camera>
+      <a-entity gltf-model="./assets/magnemite/scene.gltf" // Postion="Left - Right / Up-Down / Forward-Backward"
+      position="0 0 -2.5" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer />
+      <!-- AKKC parkering -->
+      <a-entity gps-new-entity-place="latitude: 57.04388933557441; longitude: 9.914837941482789" position="0 30 0">
+        <a-cylinder color="yellow" height="4" radius="0.5" position="0 0 0"></a-cylinder>
+        <a-cone color="yellow" radius-bottom="1.5" radius-top="0" height="3" position="0 -3.5 0"></a-cone>
+      </a-entity>
+      <a-entity gps-new-entity-place="latitude: 57.049128249675306; longitude: 9.967875857834237" position="0 30 0">
+        <a-cylinder color="yellow" height="4" radius="0.5" position="0 0 0"></a-cylinder>
+        <a-cone color="yellow" radius-bottom="1.5" radius-top="0" height="3" position="0 -3.5 0"></a-cone>
+      </a-entity>
+      <!-- Karolinelund -->
+      <a-entity gps-new-entity-place="latitude: 57.0438503111387; longitude: 9.933299960651452" position="0 30 0">
+        <a-cylinder color="yellow" height="4" radius="0.5" position="0 0 0"></a-cylinder>
+        <a-cone color="yellow" radius-bottom="1.5" radius-top="0" height="3" position="0 -3.5 0"></a-cone>
+      </a-entity>
+    </a-scene>
+  </body>
 </html>
