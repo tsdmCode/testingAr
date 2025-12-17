@@ -12,64 +12,68 @@
     </script>
   </head>
   <body style="margin: 0; overflow: hidden">
-    <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+    >
       <!-- 57.049128249675306, 9.967875857834237 -->
       <!-- 57.04907281119297, 9.968321104508842 -->
-      <a-camera gps-camera rotation-reader></a-camera>
-      <a-entity gltf-model="./assets/magnemite/scene.gltf" // Postion="Left - Right / Up-Down / Forward-Backward"
-      position="0 0 -2.5" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer />
+      <a-camera gps-camera="minDistance: 0; maxDistance: 10000" rotation-reader></a-camera>
+      <!-- <a-entity gltf-model="./assets/magnemite/scene.gltf" // Postion="Left - Right / Up-Down / Forward-Backward"
+      position="0 0 -2.5" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer /> -->
       <!-- AKKC parkering -->
-      <a-entity gps-new-entity-place="latitude: 57.04388933557441; longitude: 9.914837941482789" position="0 100 0">
+      <a-entity gps-new-entity-place="latitude: 57.04388933557441; longitude: 9.914837941482789" scale="50 50 50">
         <a-cylinder
-          color="yellow"
-          height="100"
-          radius="10"
-          position="0 0 0"
-          material="emissive: yellow; emissiveIntensity: 0.6"
+          color="#FFFF00"
+          height="2"
+          radius="0.2"
+          position="0 2 0"
+          material="shader: flat; color: #FFFF00"
         ></a-cylinder>
         <a-cone
-          color="yellow"
-          radius-bottom="25"
+          color="#FFFF00"
+          radius-bottom="0.5"
           radius-top="0"
-          height="50"
-          position="0 -75 0"
-          material="emissive: yellow; emissiveIntensity: 0.6"
+          height="1"
+          position="0 0.5 0"
+          material="shader: flat; color: #FFFF00"
         ></a-cone>
       </a-entity>
       <!-- kantine test -->
-      <a-entity gps-new-entity-place="latitude: 57.04907281119297; longitude: 9.968321104508842" position="0 100 0">
+      <a-entity gps-new-entity-place="latitude: 57.04907281119297; longitude: 9.968321104508842" scale="50 50 50">
         <a-cylinder
-          color="red"
-          height="100"
-          radius="10"
-          position="0 0 0"
-          material="emissive: red; emissiveIntensity: 0.6"
+          color="#FF0000"
+          height="2"
+          radius="0.2"
+          position="0 2 0"
+          material="shader: flat; color: #FF0000"
         ></a-cylinder>
         <a-cone
-          color="red"
-          radius-bottom="25"
+          color="#FF0000"
+          radius-bottom="0.5"
           radius-top="0"
-          height="50"
-          position="0 -75 0"
-          material="emissive: red; emissiveIntensity: 0.6"
+          height="1"
+          position="0 0.5 0"
+          material="shader: flat; color: #FF0000"
         ></a-cone>
       </a-entity>
       <!-- Karolinelund -->
-      <a-entity gps-new-entity-place="latitude: 57.0438503111387; longitude: 9.933299960651452" position="0 100 0">
+      <a-entity gps-new-entity-place="latitude: 57.0438503111387; longitude: 9.933299960651452" scale="50 50 50">
         <a-cylinder
-          color="blue"
-          height="100"
-          radius="10"
-          position="0 0 0"
-          material="emissive: blue; emissiveIntensity: 0.6"
+          color="#0000FF"
+          height="2"
+          radius="0.2"
+          position="0 2 0"
+          material="shader: flat; color: #0000FF"
         ></a-cylinder>
         <a-cone
-          color="blue"
-          radius-bottom="25"
+          color="#0000FF"
+          radius-bottom="0.5"
           radius-top="0"
-          height="50"
-          position="0 -75 0"
-          material="emissive: blue; emissiveIntensity: 0.6"
+          height="1"
+          position="0 0.5 0"
+          material="shader: flat; color: #0000FF"
         ></a-cone>
       </a-entity>
     </a-scene>
