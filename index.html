@@ -23,40 +23,58 @@
       <a-entity gltf-model="./assets/magnemite/scene.gltf" // Postion="Left - Right / Up-Down / Forward-Backward"
       position="0 0 -2.5" rotation="0 180 0" scale="0.15 0.15 0.15" animation-mixer />
       <!-- AKKC parkering -->
-      <a-entity gps-new-entity-place="latitude: 57.04388933557441; longitude: 9.914837941482789" position="0 30 0">
-        <a-cylinder color="yellow" height="4" radius="0.5" position="0 0 0"></a-cylinder>
-        <a-cone color="yellow" radius-bottom="1.5" radius-top="0" height="3" position="0 -3.5 0"></a-cone>
+      <a-entity gps-new-entity-place="latitude: 57.04388933557441; longitude: 9.914837941482789" position="0 100 0">
+        <a-cylinder
+          color="yellow"
+          height="100"
+          radius="10"
+          position="0 0 0"
+          material="emissive: yellow; emissiveIntensity: 0.6"
+        ></a-cylinder>
+        <a-cone
+          color="yellow"
+          radius-bottom="25"
+          radius-top="0"
+          height="50"
+          position="0 -75 0"
+          material="emissive: yellow; emissiveIntensity: 0.6"
+        ></a-cone>
       </a-entity>
       <!-- kantine test -->
-      <a-entity gps-new-entity-place="latitude: 57.04907281119297; longitude: 9.968321104508842" position="0 0 0">
-        <a-box
-          color="red"
-          width="10"
-          height="50"
-          depth="10"
-          position="0 0 0"
-          material="emissive: red; emissiveIntensity: 0.5"
-        ></a-box>
+      <a-entity gps-new-entity-place="latitude: 57.04907281119297; longitude: 9.968321104508842" position="0 100 0">
         <a-cylinder
           color="red"
-          height="50"
-          radius="5"
+          height="100"
+          radius="10"
           position="0 0 0"
-          material="emissive: red; emissiveIntensity: 0.5"
+          material="emissive: red; emissiveIntensity: 0.6"
         ></a-cylinder>
         <a-cone
           color="red"
-          radius-bottom="8"
+          radius-bottom="25"
           radius-top="0"
-          height="15"
-          position="0 -32.5 0"
-          material="emissive: red; emissiveIntensity: 0.5"
+          height="50"
+          position="0 -75 0"
+          material="emissive: red; emissiveIntensity: 0.6"
         ></a-cone>
       </a-entity>
       <!-- Karolinelund -->
-      <a-entity gps-new-entity-place="latitude: 57.0438503111387; longitude: 9.933299960651452" position="0 30 0">
-        <a-cylinder color="yellow" height="4" radius="0.5" position="0 0 0"></a-cylinder>
-        <a-cone color="yellow" radius-bottom="1.5" radius-top="0" height="3" position="0 -3.5 0"></a-cone>
+      <a-entity gps-new-entity-place="latitude: 57.0438503111387; longitude: 9.933299960651452" position="0 100 0">
+        <a-cylinder
+          color="blue"
+          height="100"
+          radius="10"
+          position="0 0 0"
+          material="emissive: blue; emissiveIntensity: 0.6"
+        ></a-cylinder>
+        <a-cone
+          color="blue"
+          radius-bottom="25"
+          radius-top="0"
+          height="50"
+          position="0 -75 0"
+          material="emissive: blue; emissiveIntensity: 0.6"
+        ></a-cone>
       </a-entity>
     </a-scene>
   </body>
