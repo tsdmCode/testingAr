@@ -15,7 +15,10 @@
     <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
       <!--akkc 57.049128249675306, 9.967875857834237 -->
       <!--karo 57.04907281119297, 9.968321104508842 -->
-      <a-camera gps-camera rotation-reader></a-camera>
+      <a-camera
+        gps-camera="simulateLatitude: 57.04388933557441; simulateLongitude: 9.914837941482789"
+        rotation-reader
+      ></a-camera>
       <!-- AKKC parkering -->
       <a-entity gps-entity-place="latitude: 57.04388933557441; longitude: 9.914837941482789">
         <a-entity
